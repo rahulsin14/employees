@@ -20,7 +20,6 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from polls import views
 
 urlpatterns = [
-    url(r'^$', 'path.to.function'),
     path('admin/', admin.site.urls),
     path('employees/', views.employeeList.as_view()),
 ]
