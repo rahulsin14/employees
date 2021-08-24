@@ -20,8 +20,8 @@ class employeeList(APIView):
         return Response(serializer.data)
 
     def post(self,request):
-        data =self.make_json("/home/rahul/Downloads/international-migration-March-2021-citizenship-by-visa-by-country-of-last-permanent-residence (1).csv")
-        serializer = employeesSerializer(data=data,many=True)
+        # data =self.make_json("/home/rahul/Downloads/international-migration-March-2021-citizenship-by-visa-by-country-of-last-permanent-residence (1).csv")
+        serializer = employeesSerializer(data=request,many=True)
         # print(request.data)
         if serializer.is_valid():
             serializer.save()
